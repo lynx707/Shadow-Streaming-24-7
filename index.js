@@ -7,10 +7,10 @@ const client = new Discord.Client({
 const keepAlive = require('./server.js');
 keepAlive();
 
-function formatTime() {
+function formatTime() { //Credits to himika#0001 and never#0001
   const date = new Date();
   const options = {
-    timeZone: 'Asia/Jakarta',
+    timeZone: 'Asia/Dhaka', //https://www.zeitverschiebung.net/en/ and find your city and enter here
     hour12: true,
     hour: 'numeric',
     minute: 'numeric'
@@ -23,28 +23,32 @@ client.on('ready', async () => {
   console.log(`${client.user.tag} - rich presence started!`);
 
   const r = new Discord.RichPresence()
-    .setApplicationId('YOUR CLIENT ID DISCORD BOT')
-    .setType('STREAMING')
-    .setURL('https://www.youtube.com/watch?v=xvFZjo5PgG0')
-    .setState('w/ L RMN')
-    .setName('w/ L RMN')
-    .setDetails(`Somewhen, somewhere`)
+    .setApplicationId('1079010612769722508')
+    .setType('WATCHING')
+    .setURL('https://www.youtube.com/patkhet') //Must be a youtube video link 
+    .setState('Discord Community')
+    .setName('Patkhet')
+    .setDetails(`THE NAME IT SHOWS YOUR STREAMING [${formatTime()}]`)
     .setStartTimestamp(Date.now())
-    .setAssetsLargeImage('https://cdn.discordapp.com/attachments/1109793641058287626/1111650692889849867/cat.gif')
-    .setAssetsLargeText('Hi')
-    .setAssetsSmallImage('https://cdn.discordapp.com/emojis/917227945712562207.gif?size=96&quality=lossless')
-    .setAssetsSmallText(':)')
-    .addButton(' („ᵕᴗᵕ„) ', 'https://lrmn.is-a.dev/')
-    .addButton(' ₍ᐢ._.ᐢ₎♡ ༘ ', 'https://is-a.fun/');
+ .setAssetsLargeImage('https://cdn.discordapp.com/attachments/964235721630154812/1135218808072704101/20230610_182959.gif') //You can put links in tenor or discord and etc.
+    .setAssetsLargeText('Patkhet') //Text when you hover the Large image
+    .setAssetsSmallImage('https://cdn.discordapp.com/attachments/964235721630154812/1135216057339097159/verify.gif') //You can put links in tenor or discord and etc.
+    .setAssetsSmallText('Verify') //Text when you hover the Small image
+    .addButton('Discord Server', 'https://discord.gg/n87vNuk89g')
+    .addButton('Facebook Page', 'https://facebook.com/patkhet.lol');
 
   client.user.setActivity(r);
-  client.user.setPresence({ status: "idle" });
+  client.user.setPresence({ status: "online" }); //dnd, online, idle, offline
 
+  let prevTime = null;
   setInterval(() => {
     const newTime = formatTime();
-    const newDetails = `ailurophile`;
-    r.setDetails(newDetails);
-    client.user.setActivity(r);
+    if (newTime !== prevTime) {
+      const newDetails = `Patkhet Server [${newTime}]`;
+      r.setDetails(newDetails);
+      client.user.setActivity(r);
+      prevTime = newTime;
+    }
   }, 1000); // Update every second
 });
 
