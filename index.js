@@ -28,7 +28,7 @@ client.on('ready', async () => {
     .setURL('https://www.youtube.com/patkhet') //Must be a youtube video link 
     .setState('Discord Community')
     .setName('Patkhet')
-    .setDetails(`THE NAME IT SHOWS YOUR STREAMING`)
+    .setDetails(`THE NAME IT SHOWS YOUR STREAMING [${formatTime()}]`)
     .setStartTimestamp(Date.now())
  .setAssetsLargeImage('https://i.pinimg.com/originals/8d/49/b5/8d49b5abb6290f5baf787682896c41d5.gif') //You can put links in tenor or discord and etc.
     .setAssetsLargeText('𝕷𝖚𝖈𝖎𝖋𝖊𝖗') //Text when you hover the Large image
