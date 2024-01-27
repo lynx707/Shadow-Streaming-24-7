@@ -24,27 +24,27 @@ client.on('ready', async () => {
 
   const r = new Discord.RichPresence()
     .setApplicationId('1079010612769722508')
-    .setType('WATCHING')
+    .setType('Streaming')
     .setURL('https://www.youtube.com/patkhet') //Must be a youtube video link 
     .setState('Discord Community')
     .setName('Patkhet')
-    .setDetails(`THE NAME IT SHOWS YOUR STREAMING [${formatTime()}]`)
+    .setDetails(`THE NAME IT SHOWS YOUR STREAMING`)
     .setStartTimestamp(Date.now())
- .setAssetsLargeImage('https://cdn.discordapp.com/attachments/964235721630154812/1135218808072704101/20230610_182959.gif') //You can put links in tenor or discord and etc.
-    .setAssetsLargeText('Patkhet') //Text when you hover the Large image
+ .setAssetsLargeImage('https://i.pinimg.com/originals/8d/49/b5/8d49b5abb6290f5baf787682896c41d5.gif') //You can put links in tenor or discord and etc.
+    .setAssetsLargeText('𝕷𝖚𝖈𝖎𝖋𝖊𝖗') //Text when you hover the Large image
     .setAssetsSmallImage('https://cdn.discordapp.com/attachments/964235721630154812/1135216057339097159/verify.gif') //You can put links in tenor or discord and etc.
     .setAssetsSmallText('Verify') //Text when you hover the Small image
-    .addButton('Discord Server', 'https://discord.gg/n87vNuk89g')
+    .addButton('Discord Server', 'https://discord.gg/bXDnGvWu8E')
     .addButton('Facebook Page', 'https://facebook.com/patkhet.lol');
 
   client.user.setActivity(r);
-  client.user.setPresence({ status: "online" }); //dnd, online, idle, offline
+  client.user.setPresence({ status: "idle" }); //dnd, online, idle, offline
 
   let prevTime = null;
   setInterval(() => {
     const newTime = formatTime();
     if (newTime !== prevTime) {
-      const newDetails = `Patkhet Server [${newTime}]`;
+      const newDetails = `◟́◞̀ ⟢ 𝕷ucifer ! ♡   [${newTime}]`;
       r.setDetails(newDetails);
       client.user.setActivity(r);
       prevTime = newTime;
