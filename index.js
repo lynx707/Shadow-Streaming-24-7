@@ -45,6 +45,7 @@ client.on('ready', async () => {
     const newTime = formatTime();
     if (newTime !== prevTime) {
       const newDetails = `⟢ sᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ ⟢`;
+      r.setDetails(newDetails);
       client.user.setActivity(r);
       prevTime = newTime;
     }
