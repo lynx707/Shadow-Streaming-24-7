@@ -26,26 +26,25 @@ client.on('ready', async () => {
     .setApplicationId('1079010612769722508')
     .setType('STREAMING')
     .setURL('https://www.twitch.tv/spinninrecords') //Must be a youtube video link 
-    .setState('Patkhet')
+    .setState('ᴀᴛ ᴛʜᴇ ᴇɴᴅ ᴏғ ᴛʜᴇ ᴍᴀɴɢᴀ, ɪ ᴀᴍ ᴜɴᴅᴏᴜʙᴛᴇᴅʟʏ ᴛʜᴇ sᴛʀᴏɴɢᴇsᴛ ᴍᴏɴᴀʀᴄʜ ᴀɴᴅ ʜᴜɴᴛᴇʀ.')
     .setName('Discord Community')
     .setDetails(`THE NAME IT SHOWS YOUR STREAMING [${formatTime()}]`)
     .setStartTimestamp(Date.now())
  .setAssetsLargeImage('https://cdn.discordapp.com/attachments/978626140782624798/1203648439485730826/df33lic-d25ed539-af4c-4b7c-bbb9-415e8d09f057.gif') //You can put links in tenor or discord and etc.
-    .setAssetsLargeText('𝕷𝖚𝖈𝖎𝖋𝖊𝖗') //Text when you hover the Large image
-    .setAssetsSmallImage('https://cdn.discordapp.com/attachments/964235721630154812/1135216057339097159/verify.gif') //You can put links in tenor or discord and etc.
-    .setAssetsSmallText('Verify') //Text when you hover the Small image
+    .setAssetsLargeText('𝕾𝖚𝖓𝖌 𝕵𝖎𝖓-𝖜𝖔𝖔') //Text when you hover the Large image
+    .setAssetsSmallImage('https://cdn.discordapp.com/attachments/869609600842858526/1203652745836634123/flame_.gif') //You can put links in tenor or discord and etc.
+    .setAssetsSmallText('𝕻𝖚𝖗𝖕𝖑𝖊 𝕱𝖑𝖆𝖒𝖊') //Text when you hover the Small image
     .addButton('Discord Server', 'https://discord.gg/bXDnGvWu8E')
-    .addButton('Facebook Page', 'https://facebook.com/patkhet.lol');
+    .addButton('Instagram', 'https://instagram.com/patkhet.lol');
 
   client.user.setActivity(r);
-  client.user.setPresence({ status: "online" }); //dnd, online, idle, offline
+  client.user.setPresence({ status: "dnd" }); //dnd, online, idle, offline
 
   let prevTime = null;
   setInterval(() => {
     const newTime = formatTime();
     if (newTime !== prevTime) {
-      const newDetails = `◟́◞̀ ⟢ 𝕷ucifer ! ♡`;
-      r.setDetails(newDetails);
+      const newDetails = `⟢ sᴏʟᴏ ʟᴇᴠᴇʟɪɴɢ ⟢`;
       client.user.setActivity(r);
       prevTime = newTime;
     }
