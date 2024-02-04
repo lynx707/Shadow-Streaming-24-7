@@ -30,7 +30,7 @@ client.on('ready', async () => {
     .setName('Discord Community')
     .setDetails(`THE NAME IT SHOWS YOUR STREAMING [${formatTime()}]`)
     .setStartTimestamp(Date.now())
- .setAssetsLargeImage('https://cdn.discordapp.com/attachments/869609600842858526/1200857586392641658/lucifer.gif') //You can put links in tenor or discord and etc.
+ .setAssetsLargeImage('https://cdn.discordapp.com/attachments/978626140782624798/1203648439485730826/df33lic-d25ed539-af4c-4b7c-bbb9-415e8d09f057.gif') //You can put links in tenor or discord and etc.
     .setAssetsLargeText('𝕷𝖚𝖈𝖎𝖋𝖊𝖗') //Text when you hover the Large image
     .setAssetsSmallImage('https://cdn.discordapp.com/attachments/964235721630154812/1135216057339097159/verify.gif') //You can put links in tenor or discord and etc.
     .setAssetsSmallText('Verify') //Text when you hover the Small image
